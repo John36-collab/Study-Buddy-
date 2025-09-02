@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Study Buddy</title>
+    <link rel="stylesheet" href="static/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Study Question Generator</h1>
+
+        <button id="toggleTheme">Toggle Dark Mode</button>
+
+        <form id="noteForm">
+            <textarea name="notes" rows="10" cols="50" placeholder="Paste your study notes here..." required></textarea><br>
+            <button type="submit">Generate Questions</button>
+        </form>
+
+        <div id="loading" class="message" style="display:none;">Generating...</div>
+        <div id="progress" class="message"></div>
+        <div id="flashcards-container"></div>
+        <button id="downloadBtn" style="display:none;">Download Flashcards</button>
+    </div>
+
+    <script src="static/script.js"></script>
+
+    <footer>
+        <p>&copy; Nwafor John Chukwuebuka 2025</p>
+    </footer>
+</body>
+</html>

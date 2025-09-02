@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#toggleTheme {
+    background-color: #6c757d;
+    margin-bottom: 20px;
+}
+
+#toggleTheme:hover {
+    background-color: #5a6268;
+}
+
+#noteForm textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 150px;
+}
+
+#noteForm button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+#flashcards-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center flashcards */
+    gap: 20px; /* Space between flashcards */
+}
+
+/* Flashcard Styles */
+.card {
+    width: 200px;
+    height: 120px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.flipped .inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.front {
+    background: #28a745; /* Green */
+    color: white;
+}
+
+.back {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    transform: rotateY(180deg);
+}
+
+/* Speak button */
+.speak {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.speak:hover {
+    background-color: #eee;
+}
+
+#downloadBtn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    background-color: #17a2b8; /* Info blue */
+}
+
+#downloadBtn:hover {
+    background-color: #138496;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+.dark-mode .container {
+    background-color: #16213e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode h1 {
+    color: #7fffd4; /* Aqua */
+}
+
+.dark-mode button {
+    background-color: #0f3460;
+    color: #e0e0e0;
+}
+
+.dark-mode button:hover {
+    background-color: #0a2342;
+}
+
+.dark-mode #toggleTheme {
+    background-color: #52667b;
+}
+
+.dark-mode #toggleTheme:hover {
+    background-color: #415263;
+}
+
+.dark-mode #noteForm textarea {
+    background-color: #212130;
+    border-color: #3a3a50;
+    color: #e0e0e0;
+}
+
+.dark-mode .message {
+    color: #b0b0b0;
+}
+
+.dark-mode .card .inner {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .front {
+    background: #388e3c; /* Darker green */
+}
+
+.dark-mode .back {
+    background: #2a2a40;
+    color: #e0e0e0;
+    border-color: #4a4a60;
+}
+
+.dark-mode .speak {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode .speak:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode #downloadBtn {
+    background-color: #007bff;
+}
+
+.dark-mode #downloadBtn:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode footer {
+    border-top-color: #3a3a50;
+    color: #a0a0a0;
+}
