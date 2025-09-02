@@ -1,5 +1,6 @@
 AI Study Buddy - Flashcard Generator
-
+Pitch Deck link : 
+https://gamma.app/docs/AI-StudyBuddy-Revolutionizing-Learning-with-Personalized-AI-zt86ucl7ebsh81t
 Project Overview
 
 AI Study Buddy is a web application that transforms study notes into interactive flashcards using AI-powered question generation. The application leverages modern web technologies and machine learning to create an effective study tool.
