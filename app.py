@@ -1,18 +1,21 @@
-from flask import Flask, request, render_template, jsonify
+# Add this import at the top
+from config import Config
+
+# Update the HF_HEADERS line
+HF_HEADERS = {"Authorization": f"Bearer {Config.HF_API_TOKEN}"}from flask import Flask, request, render_template, jsonify
 import pymysql
 import requests
 
 app = Flask(__name__)
 
 # Hugging Face API
-HF_API_URL = "https://api-inference.huggingface.co/models/openai/gpt"
-HF_HEADERS = {"Authorization": "Bearer YOUR_HUGGING_FACE_TOKEN"}
+HF_AP}
 
 # Connect to pymysql
 db = pymysql.connect(
     host="localhost",
     user="Ebuka",
-    passwd="Qwas12#",
+    passwd=
     db="studybuddy"
 )
 cursor = db.cursor()
